@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.5" tiledversion="1.7.2" orientation="orthogonal" renderorder="right-down" width="240" height="13" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="26">
+ <tileset firstgid="1" source="tileset_gutter.tsx"/>
+ <layer id="1" name="background" width="240" height="13">
+  <data encoding="base64" compression="zlib">
+   eJzt0sEJwDAAA7HQ/TfOJ0sUG4wEt8Hd75yr34Kk9u9rQVL797Ugqf37WpDU/n0tSGr/vhYktX9fC5Lav68FSe3f14Kk9u9rQVL797Ugqf37WpDWfn4pSHoP0jZ0
+  </data>
+ </layer>
+ <layer id="2" name="graphics" width="240" height="13">
+  <data encoding="base64" compression="zlib">
+   eJzt1ksKwjAUheGkHemsugud+agLEdeiLsZ1qTupjryDFIIQY63pI/k/OBTkJrGDQ6oUAAAYmmum1M3knvV3fh9nA2NXSW8eJs8WHfq1h9UfzgZi1dX9FrKH9jcCdzVSEsP9Zn8jjP1dALjlkotJ3vN/AQAgpIlWaqrDzQP4XtN+LWR2ac3PPGvf59vIPQFS07Rf9nwhz7Vk/mG9b39f/wG42f3ayrM02Tl6Vc/vJSvT343k4Jm39673L8werrVH+f0kOdNxJEBHkqG8D9ClF898K1c=
+  </data>
+ </layer>
+ <objectgroup id="3" name="Ground">
+  <object id="4" x="0" y="192" width="800" height="16"/>
+  <object id="5" x="676" y="-91"/>
+  <object id="7" x="833" y="193" width="511" height="15"/>
+ </objectgroup>
+ <objectgroup id="4" name="pipes">
+  <object id="22" x="209" y="144.5" width="30" height="47.5"/>
+  <object id="23" x="401" y="128" width="30.5" height="63.5"/>
+  <object id="24" x="592.5" y="128.5" width="30.5" height="64"/>
+  <object id="25" x="1130" y="272"/>
+ </objectgroup>
+ <objectgroup id="7" name="coins"/>
+ <objectgroup id="5" name="bricks">
+  <object id="8" x="960.25" y="96" width="15.75" height="15.5"/>
+  <object id="9" x="976.75" y="96.25" width="15" height="15.25"/>
+  <object id="10" x="992.25" y="96.5" width="14.75" height="15"/>
+  <object id="13" x="1008.38" y="96.25" width="14.75" height="15"/>
+  <object id="14" x="896.625" y="144.75" width="14.75" height="15"/>
+  <object id="15" x="912.875" y="144.5" width="14.75" height="15"/>
+  <object id="16" x="928.625" y="144.5" width="14.75" height="15"/>
+  <object id="17" x="944.625" y="144.75" width="14.75" height="15"/>
+  <object id="18" x="960.875" y="144.25" width="14.75" height="15"/>
+  <object id="19" x="976.375" y="144.5" width="14.75" height="15"/>
+  <object id="20" x="992.375" y="144.5" width="14.75" height="15"/>
+  <object id="21" x="1008.38" y="144.75" width="14.75" height="15"/>
+ </objectgroup>
+</map>

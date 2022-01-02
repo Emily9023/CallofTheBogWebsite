@@ -1,0 +1,12 @@
+Pengo.png
+size: 1452, 326
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+PengoRunning_Spritesheet
+  rotate: false
+  xy: 0, 0
+  size: 1452, 326
+  orig: 1452, 326
+  offset: 0, 0
+  index: -1
