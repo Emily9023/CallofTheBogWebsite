@@ -3,7 +3,7 @@ package com.emily.callofthebog.client;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.backends.gwt.GwtApplication;
 import com.badlogic.gdx.backends.gwt.GwtApplicationConfiguration;
-import com.emilyn.callofthebog.CallofTheBog;
+import com.emily.callofthebog.CallofTheBog;
 
 public class HtmlLauncher extends GwtApplication {
 
