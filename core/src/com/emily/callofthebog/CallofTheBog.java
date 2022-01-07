@@ -1,12 +1,12 @@
-package com.emilyn.callofthebog;
+package com.emily.callofthebog;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.ScreenUtils;
-import com.emilyn.callofthebog.Screens.PlayMenu;
-import com.emilyn.callofthebog.Screens.PlayScreen;
+import com.emily.callofthebog.Screens.PlayMenu;
+import com.emily.callofthebog.Screens.PlayScreen;
 
 import java.applet.Applet;
 

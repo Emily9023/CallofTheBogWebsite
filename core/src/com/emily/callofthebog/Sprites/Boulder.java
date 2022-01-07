@@ -1,4 +1,4 @@
-package com.emilyn.callofthebog.Sprites;
+package com.emily.callofthebog.Sprites;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.maps.tiled.TiledMap;
@@ -11,7 +11,7 @@ public class Boulder extends InteractiveTileObject{
         super(world, map, bounds);
 
         fixture.setUserData(this);
-        setCategoryFilter(com.emilyn.callofthebog.CallofTheBog.BOULDER_BIT);
+        setCategoryFilter(com.emily.callofthebog.CallofTheBog.BOULDER_BIT);
 
 
     }

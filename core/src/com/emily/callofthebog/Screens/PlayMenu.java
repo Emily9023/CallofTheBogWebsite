@@ -1,4 +1,4 @@
-package com.emilyn.callofthebog.Screens;
+package com.emily.callofthebog.Screens;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -9,10 +9,11 @@ import com.badlogic.gdx.maps.tiled.TmxMapLoader;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
-import com.emilyn.callofthebog.Scenes.PlayMenuButtons;
+import com.emily.callofthebog.CallofTheBog;
+import com.emily.callofthebog.Scenes.PlayMenuButtons;
 
 public class PlayMenu implements Screen {
-    private com.emilyn.callofthebog.CallofTheBog game;
+    private com.emily.callofthebog.CallofTheBog game;
 
     private OrthographicCamera gameCam;
     private Viewport gamePort;
@@ -23,13 +24,13 @@ public class PlayMenu implements Screen {
     private OrthogonalTiledMapRenderer renderer;
 
 
-    public PlayMenu(com.emilyn.callofthebog.CallofTheBog game){
+    public PlayMenu(CallofTheBog game){
 
         this.game = game;
         gameCam = new OrthographicCamera();
 
         //create a FitViewport to maintain virtual aspect ratio despite screen differences
-        gamePort = new FitViewport(com.emilyn.callofthebog.CallofTheBog.V_WIDTH / com.emilyn.callofthebog.CallofTheBog.PPM, com.emilyn.callofthebog.CallofTheBog.V_HEIGHT / com.emilyn.callofthebog.CallofTheBog.PPM, gameCam);
+        gamePort = new FitViewport(com.emily.callofthebog.CallofTheBog.V_WIDTH / com.emily.callofthebog.CallofTheBog.PPM, com.emily.callofthebog.CallofTheBog.V_HEIGHT / com.emily.callofthebog.CallofTheBog.PPM, gameCam);
 
         //create our game HUD for scores/timers/level info
         buttons = new PlayMenuButtons(game.batch);
@@ -37,7 +38,7 @@ public class PlayMenu implements Screen {
         //load our map and setup our map renderer
         mapLoader = new TmxMapLoader();
         map = mapLoader.load("level1.tmx");
-        renderer = new OrthogonalTiledMapRenderer(map,  1 / com.emilyn.callofthebog.CallofTheBog.PPM);
+        renderer = new OrthogonalTiledMapRenderer(map,  1 / com.emily.callofthebog.CallofTheBog.PPM);
 
         //initially set our gamcacm to be centered correctly at the start of the game
         gameCam.position.set(gamePort.getWorldWidth()/2, gamePort.getWorldHeight()/2, 0); //usually set at (0,0)

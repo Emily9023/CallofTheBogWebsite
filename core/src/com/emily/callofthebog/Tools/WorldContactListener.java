@@ -1,4 +1,4 @@
-package com.emilyn.callofthebog.Tools;
+package com.emily.callofthebog.Tools;
 
 
 import com.badlogic.gdx.Gdx;
@@ -7,7 +7,7 @@ import com.badlogic.gdx.physics.box2d.ContactImpulse;
 import com.badlogic.gdx.physics.box2d.ContactListener;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.Manifold;
-import com.emilyn.callofthebog.Sprites.Pengo;
+import com.emily.callofthebog.Sprites.Pengo;
 
 public class WorldContactListener implements ContactListener {
 
@@ -31,10 +31,10 @@ public class WorldContactListener implements ContactListener {
         int cDef = fixA.getFilterData().categoryBits | fixB.getFilterData().categoryBits;
 
         switch(cDef) {
-            case com.emilyn.callofthebog.CallofTheBog.EVIL_BIT | com.emilyn.callofthebog.CallofTheBog.PENGO_BIT: //if hit bad guy
+            case com.emily.callofthebog.CallofTheBog.EVIL_BIT | com.emily.callofthebog.CallofTheBog.PENGO_BIT: //if hit bad guy
                 Gdx.app.log("PENGO", "DIED");
 
-                if (fixA.getFilterData().categoryBits == com.emilyn.callofthebog.CallofTheBog.EVIL_BIT) {
+                if (fixA.getFilterData().categoryBits == com.emily.callofthebog.CallofTheBog.EVIL_BIT) {
                     Gdx.app.log("PENGO", "about to die");
                     ((Pengo) fixB.getUserData()).onHit();
                 }
@@ -43,9 +43,9 @@ public class WorldContactListener implements ContactListener {
 
 
 
-            case com.emilyn.callofthebog.CallofTheBog.BOULDER_BIT | com.emilyn.callofthebog.CallofTheBog.PENGO_BIT: //if hit boulder guy
+            case com.emily.callofthebog.CallofTheBog.BOULDER_BIT | com.emily.callofthebog.CallofTheBog.PENGO_BIT: //if hit boulder guy
 
-                if (fixA.getFilterData().categoryBits == com.emilyn.callofthebog.CallofTheBog.BOULDER_BIT) {
+                if (fixA.getFilterData().categoryBits == com.emily.callofthebog.CallofTheBog.BOULDER_BIT) {
                     Gdx.app.log("Pengo", "bonk");
                 }
 

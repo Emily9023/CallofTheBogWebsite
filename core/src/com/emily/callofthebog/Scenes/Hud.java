@@ -1,4 +1,4 @@
-package com.emilyn.callofthebog.Scenes;
+package com.emily.callofthebog.Scenes;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -33,7 +33,7 @@ public class Hud implements Disposable {
         timeCount = 0;
         score = 0;
 
-        viewport = new FitViewport(com.emilyn.callofthebog.CallofTheBog.V_WIDTH, com.emilyn.callofthebog.CallofTheBog.V_HEIGHT, new OrthographicCamera());
+        viewport = new FitViewport(com.emily.callofthebog.CallofTheBog.V_WIDTH, com.emily.callofthebog.CallofTheBog.V_HEIGHT, new OrthographicCamera());
         stage = new Stage(viewport, sb);
 
         Table table = new Table();

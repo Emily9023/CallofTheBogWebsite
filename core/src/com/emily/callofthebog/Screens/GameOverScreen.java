@@ -1,4 +1,4 @@
-package com.emilyn.callofthebog.Screens;
+package com.emily.callofthebog.Screens;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
@@ -21,8 +21,8 @@ public class GameOverScreen implements Screen {
 
     public GameOverScreen(Game game, double[] scores){
         this.game = game;
-        viewport = new FitViewport(com.emilyn.callofthebog.CallofTheBog.V_WIDTH, com.emilyn.callofthebog.CallofTheBog.V_HEIGHT, new OrthographicCamera());
-        stage = new Stage(viewport, ((com.emilyn.callofthebog.CallofTheBog) game).batch);
+        viewport = new FitViewport(com.emily.callofthebog.CallofTheBog.V_WIDTH, com.emily.callofthebog.CallofTheBog.V_HEIGHT, new OrthographicCamera());
+        stage = new Stage(viewport, ((com.emily.callofthebog.CallofTheBog) game).batch);
 
         Label.LabelStyle font = new Label.LabelStyle(new BitmapFont(), Color.WHITE);
 
@@ -55,7 +55,7 @@ public class GameOverScreen implements Screen {
     @Override
     public void render(float delta) {
         if(Gdx.input.justTouched()) {
-            game.setScreen(new PlayScreen((com.emilyn.callofthebog.CallofTheBog) game));
+            game.setScreen(new PlayScreen((com.emily.callofthebog.CallofTheBog) game));
             dispose();
         }
         Gdx.gl.glClearColor(0, 0, 0, 1);

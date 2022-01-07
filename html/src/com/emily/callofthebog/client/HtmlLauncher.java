@@ -3,7 +3,7 @@ package com.emily.callofthebog.client;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.backends.gwt.GwtApplication;
 import com.badlogic.gdx.backends.gwt.GwtApplicationConfiguration;
-import com.emily.callofthebog.CalloftheBog;
+import com.emilyn.callofthebog.CallofTheBog;
 
 public class HtmlLauncher extends GwtApplication {
 
@@ -17,6 +17,6 @@ public class HtmlLauncher extends GwtApplication {
 
         @Override
         public ApplicationListener createApplicationListener () {
-                return new CalloftheBog();
+                return new CallofTheBog();
         }
 }

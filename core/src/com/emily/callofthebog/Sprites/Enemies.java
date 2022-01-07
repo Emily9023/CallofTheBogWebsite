@@ -1,4 +1,4 @@
-package com.emilyn.callofthebog.Sprites;
+package com.emily.callofthebog.Sprites;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.maps.tiled.TiledMap;
@@ -10,7 +10,7 @@ public class Enemies extends InteractiveTileObject{
     public Enemies(World world, TiledMap map, Rectangle bounds){
         super(world, map, bounds);
         fixture.setUserData(this);
-        setCategoryFilter(com.emilyn.callofthebog.CallofTheBog.EVIL_BIT);
+        setCategoryFilter(com.emily.callofthebog.CallofTheBog.EVIL_BIT);
     }
 
     @Override

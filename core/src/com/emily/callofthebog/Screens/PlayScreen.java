@@ -1,4 +1,4 @@
-package com.emilyn.callofthebog.Screens;
+package com.emily.callofthebog.Screens;
 
 import static java.lang.Math.pow;
 
@@ -16,13 +16,14 @@ import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
-import com.emilyn.callofthebog.Scenes.Hud;
-import com.emilyn.callofthebog.Sprites.Pengo;
-import com.emilyn.callofthebog.Tools.B2WorldCreator;
-import com.emilyn.callofthebog.Tools.WorldContactListener;
+import com.emily.callofthebog.CallofTheBog;
+import com.emily.callofthebog.Scenes.Hud;
+import com.emily.callofthebog.Sprites.Pengo;
+import com.emily.callofthebog.Tools.B2WorldCreator;
+import com.emily.callofthebog.Tools.WorldContactListener;
 
 public class PlayScreen implements Screen {
-    private com.emilyn.callofthebog.CallofTheBog game;
+    private com.emily.callofthebog.CallofTheBog game;
     private TextureAtlas atlas;
 
     private float speedAccelerator = 1.002f;
@@ -50,14 +51,14 @@ public class PlayScreen implements Screen {
     public Vector2 WorldForces = new Vector2(0, 0);
 
 
-    public PlayScreen(com.emilyn.callofthebog.CallofTheBog game){
+    public PlayScreen(CallofTheBog game){
         atlas = new TextureAtlas("Pengo.pack");
 
         this.game = game;
         gameCam = new OrthographicCamera();
 
         //create a FitViewport to maintain virtual aspect ratio despite screen differences
-        gamePort = new FitViewport(com.emilyn.callofthebog.CallofTheBog.V_WIDTH / com.emilyn.callofthebog.CallofTheBog.PPM, com.emilyn.callofthebog.CallofTheBog.V_HEIGHT / com.emilyn.callofthebog.CallofTheBog.PPM, gameCam);
+        gamePort = new FitViewport(CallofTheBog.V_WIDTH / CallofTheBog.PPM, com.emily.callofthebog.CallofTheBog.V_HEIGHT / com.emily.callofthebog.CallofTheBog.PPM, gameCam);
 
         //create our game HUD for scores/timers/level info
         hud = new Hud(game.batch);
@@ -65,7 +66,7 @@ public class PlayScreen implements Screen {
         //load our map and setup our map renderer
         mapLoader = new TmxMapLoader();
         map = mapLoader.load("Maps/boggermap.tmx");
-        renderer = new OrthogonalTiledMapRenderer(map,  1 / com.emilyn.callofthebog.CallofTheBog.PPM);
+        renderer = new OrthogonalTiledMapRenderer(map,  1 / com.emily.callofthebog.CallofTheBog.PPM);
 
 
         //initially set our gamecam to be centered correctly at the start of the game
@@ -133,7 +134,7 @@ public class PlayScreen implements Screen {
 
         speedAcceleratorPower ++;
 
-        gameCam.position.x = (float) (gameCam.position.x + (1/ com.emilyn.callofthebog.CallofTheBog.PPM) * pow(speedAccelerator, speedAcceleratorPower));
+        gameCam.position.x = (float) (gameCam.position.x + (1/ com.emily.callofthebog.CallofTheBog.PPM) * pow(speedAccelerator, speedAcceleratorPower));
 
         maxPengoSpeed = new Vector2((float) pow(maxPengoSpeed.x, 1.001), (float) pow(maxPengoSpeed.y, 1.001));
 

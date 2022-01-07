@@ -1,4 +1,4 @@
-package com.emilyn.callofthebog.Scenes;
+package com.emily.callofthebog.Scenes;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
@@ -29,7 +29,7 @@ public class PlayMenuButtons implements Disposable {
 
     public PlayMenuButtons(SpriteBatch sb) {
 
-        viewport = new FitViewport(com.emilyn.callofthebog.CallofTheBog.V_WIDTH, com.emilyn.callofthebog.CallofTheBog.V_HEIGHT, new OrthographicCamera());
+        viewport = new FitViewport(com.emily.callofthebog.CallofTheBog.V_WIDTH, com.emily.callofthebog.CallofTheBog.V_HEIGHT, new OrthographicCamera());
         stage = new Stage(viewport, sb);
 
         table = new Table();

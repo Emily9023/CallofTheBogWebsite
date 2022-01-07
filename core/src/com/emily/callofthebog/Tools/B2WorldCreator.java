@@ -1,4 +1,4 @@
-package com.emilyn.callofthebog.Tools;
+package com.emily.callofthebog.Tools;
 
 import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.objects.RectangleMapObject;
@@ -9,8 +9,8 @@ import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
-import com.emilyn.callofthebog.Sprites.Boulder;
-import com.emilyn.callofthebog.Sprites.Enemies;
+import com.emily.callofthebog.Sprites.Boulder;
+import com.emily.callofthebog.Sprites.Enemies;
 
 public class B2WorldCreator {
     public B2WorldCreator(World world, TiledMap map){
@@ -26,11 +26,11 @@ public class B2WorldCreator {
             Rectangle rect = ((RectangleMapObject) object).getRectangle();
 
             bdef.type = BodyDef.BodyType.StaticBody; //defines that the body is static
-            bdef.position.set((rect.getX() + rect.getWidth() / 2) / com.emilyn.callofthebog.CallofTheBog.PPM, (rect.getY() + rect.getHeight() / 2) / com.emilyn.callofthebog.CallofTheBog.PPM); //sets the position of where the body is (position of the rect
+            bdef.position.set((rect.getX() + rect.getWidth() / 2) / com.emily.callofthebog.CallofTheBog.PPM, (rect.getY() + rect.getHeight() / 2) / com.emily.callofthebog.CallofTheBog.PPM); //sets the position of where the body is (position of the rect
 
             body = world.createBody(bdef); //create a body in the world according to the specifications of bdef
 
-            shape.setAsBox(rect.getWidth() / 2 / com.emilyn.callofthebog.CallofTheBog.PPM, rect.getHeight() /2 / com.emilyn.callofthebog.CallofTheBog.PPM ); //set shape
+            shape.setAsBox(rect.getWidth() / 2 / com.emily.callofthebog.CallofTheBog.PPM, rect.getHeight() /2 / com.emily.callofthebog.CallofTheBog.PPM ); //set shape
             fdef.shape = shape; //initialize the shpae of the fixture definition
             body.createFixture(fdef); //sets the fixture of the body according to the specifications of fdef
 

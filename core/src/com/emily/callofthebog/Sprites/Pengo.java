@@ -1,4 +1,4 @@
-package com.emilyn.callofthebog.Sprites;
+package com.emily.callofthebog.Sprites;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.Animation;
@@ -10,7 +10,7 @@ import com.badlogic.gdx.physics.box2d.CircleShape;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.utils.Array;
-import com.emilyn.callofthebog.Screens.PlayScreen;
+import com.emily.callofthebog.Screens.PlayScreen;
 
 public class Pengo extends Sprite {
     public enum State {DEAD, RUNNING, STANDING};
@@ -60,7 +60,7 @@ public class Pengo extends Sprite {
         frames.clear();
 
         PengoStanding = new TextureRegion(getTexture(),0, 0, 362, 326);
-        setBounds(0, 0, 362 / com.emilyn.callofthebog.CallofTheBog.PPM/10, 326 / com.emilyn.callofthebog.CallofTheBog.PPM/10);
+        setBounds(0, 0, 362 / com.emily.callofthebog.CallofTheBog.PPM/10, 326 / com.emily.callofthebog.CallofTheBog.PPM/10);
         setRegion(PengoStanding);
     }
 
@@ -129,15 +129,15 @@ public class Pengo extends Sprite {
 
     public void definePengo(){
         BodyDef bdef = new BodyDef();
-        bdef.position.set(32 / com.emilyn.callofthebog.CallofTheBog.PPM, 32 / com.emilyn.callofthebog.CallofTheBog.PPM);
+        bdef.position.set(32 / com.emily.callofthebog.CallofTheBog.PPM, 32 / com.emily.callofthebog.CallofTheBog.PPM);
         bdef.type = BodyDef.BodyType.DynamicBody;
         b2body = world.createBody(bdef);
 
         FixtureDef fdef = new FixtureDef();
         CircleShape shape = new CircleShape();
-        shape.setRadius(pengoSize / com.emilyn.callofthebog.CallofTheBog.PPM);
-        fdef.filter.categoryBits = com.emilyn.callofthebog.CallofTheBog.PENGO_BIT;
-        fdef.filter.maskBits = com.emilyn.callofthebog.CallofTheBog.DEFAULT_BIT | com.emilyn.callofthebog.CallofTheBog.BOULDER_BIT | com.emilyn.callofthebog.CallofTheBog.EVIL_BIT;
+        shape.setRadius(pengoSize / com.emily.callofthebog.CallofTheBog.PPM);
+        fdef.filter.categoryBits = com.emily.callofthebog.CallofTheBog.PENGO_BIT;
+        fdef.filter.maskBits = com.emily.callofthebog.CallofTheBog.DEFAULT_BIT | com.emily.callofthebog.CallofTheBog.BOULDER_BIT | com.emily.callofthebog.CallofTheBog.EVIL_BIT;
 
 
         fdef.shape = shape;

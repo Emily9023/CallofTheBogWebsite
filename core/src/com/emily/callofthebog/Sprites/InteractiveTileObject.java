@@ -1,4 +1,4 @@
-package com.emilyn.callofthebog.Sprites;
+package com.emily.callofthebog.Sprites;
 
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TiledMapTile;
@@ -32,11 +32,11 @@ public abstract class InteractiveTileObject {
         PolygonShape shape = new PolygonShape();
 
         bdef.type = BodyDef.BodyType.StaticBody; //defines that the body is static
-        bdef.position.set((bounds.getX() + bounds.getWidth() / 2) / com.emilyn.callofthebog.CallofTheBog.PPM, (bounds.getY() + bounds.getHeight() / 2) / com.emilyn.callofthebog.CallofTheBog.PPM); //sets the position of where the body is (position of the rect
+        bdef.position.set((bounds.getX() + bounds.getWidth() / 2) / com.emily.callofthebog.CallofTheBog.PPM, (bounds.getY() + bounds.getHeight() / 2) / com.emily.callofthebog.CallofTheBog.PPM); //sets the position of where the body is (position of the rect
 
         body = world.createBody(bdef); //create a body in the world according to the specifications of bdef
 
-        shape.setAsBox(bounds.getWidth() / 2 / com.emilyn.callofthebog.CallofTheBog.PPM, bounds.getHeight() /2 / com.emilyn.callofthebog.CallofTheBog.PPM ); //set shape
+        shape.setAsBox(bounds.getWidth() / 2 / com.emily.callofthebog.CallofTheBog.PPM, bounds.getHeight() /2 / com.emily.callofthebog.CallofTheBog.PPM ); //set shape
         fdef.shape = shape; //initialize the shape of the fixture definition
         fixture = body.createFixture(fdef); //sets the fixture of the body according to the specifications of fdef
 
