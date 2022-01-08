@@ -158,5 +158,9 @@ public class Pengo extends Sprite {
         destroyed = true;
     }
 
+    public float getPengoPosition(){
+        return b2body.getPosition().x;
+    }
+
 
 }

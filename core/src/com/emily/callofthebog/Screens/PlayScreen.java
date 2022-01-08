@@ -138,7 +138,7 @@ public class PlayScreen implements Screen {
 
         maxPengoSpeed = new Vector2((float) pow(maxPengoSpeed.x, 1.001), (float) pow(maxPengoSpeed.y, 1.001));
 
-        hud.update(dt, gameCam.position.x);
+        hud.update(dt, player.getPengoPosition());
 
         gameCam.update(); //update changes in the cam
         renderer.setView(gameCam); //makes the renderer render the gameCam
